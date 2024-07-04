@@ -9,6 +9,7 @@
   - `MainClass.java` executes the program.
 
 - **Command Support**
+
 | Command                      | Description                                             |
 |------------------------------|---------------------------------------------------------|
 | `penup`                      | Lifts the pen to stop drawing.                          |
