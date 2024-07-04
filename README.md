@@ -8,6 +8,7 @@ This project is a simple graphics tool implemented in Java using the Swing class
 - [Running the Projects](#running-the-projects)
 - [Features](#features)
 - [License](#license)
+- [Acknowledgements](#acknowledgements)
 - [Get in Touch](#get-in-touch)
 
 
@@ -125,7 +126,7 @@ To run these projects, you need to have the following installed on your machine:
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 
-## Acknowledgments
+## Acknowledgements
 Professor Duncan Mullier: Module Leader for the Object-Oriented Programming course.
 LBUGraphics: Provided JAR file for graphics functionalities.
 
