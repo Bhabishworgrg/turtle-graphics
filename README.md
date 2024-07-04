@@ -63,12 +63,12 @@ To run these projects, you need to have the following installed on your machine:
 - **Pen Commands**:
   - `penup`: Lifts the pen from the canvas, so that movement does not get shown.
   - `pendown`: Places the pen down on the canvas so movement gets shown as a drawn line.
-  - `pencolour <r>,<g>,<b>`:	Makes the RGB colour from <r>,<g> and <b> parameters and sets the pencolour to the made colour.
+  - `pencolour <r>,<g>,<b>`:	Makes the RGB colour from \<r>,\<g> and \<b> parameters and sets the pencolour to the made colour.
   - `penwidth <width>`:	Sets the pen’s width to specified width.
 
 - **Movement Commands**:
-  - `turnleft <degrees>`: Turn <degrees> to the left.
-  - `turnright <degrees>`: Turn <degrees> to the right.
+  - `turnleft <degrees>`: Turn \<degrees> to the left.
+  - `turnright <degrees>`: Turn \<degrees> to the right.
   - `forward <distance>`: Move forward the specified distance.
   - `backward <distance>`: Move backwards the specified distance.
   - `position <x>,<y>`:	Places the turtle in the specified coordinates.
