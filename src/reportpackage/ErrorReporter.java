@@ -239,6 +239,7 @@ public class ErrorReporter {
 	 * @return true if the parameters are integers.
 	 */
 	private boolean isValueInt(String[] values){
+		@SuppressWarnings("unused")
 		int value1, value2, value3;
 		try {
 			value1 = Integer.parseInt(values[0]);
@@ -259,6 +260,7 @@ public class ErrorReporter {
 	 * @return true if the parameter is integer.
 	 */
 	private boolean isValueInt() {
+		@SuppressWarnings("unused")
 		int value;
 		try {
 			value = Integer.parseInt(terms[1]);

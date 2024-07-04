@@ -9,6 +9,7 @@ import javax.swing.*;
  * LoadFilePanel provides panel that allows to select the file and its format to load.
  */
 public class LoadFilePanel extends JPanel {
+	@SuppressWarnings("rawtypes")
 	private JComboBox filesCombo;
 	private JButton button;
 	private LoadHandler loader;
@@ -16,6 +17,7 @@ public class LoadFilePanel extends JPanel {
 	private String[] fileNames;
 	
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public LoadFilePanel() {
 		loader = new LoadHandler();
 		fileNames = getFileNames();

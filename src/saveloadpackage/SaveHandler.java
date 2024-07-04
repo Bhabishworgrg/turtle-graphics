@@ -52,6 +52,12 @@ public class SaveHandler {
 	 * @throws IOException
 	 */
 	private void saveFiles() throws IOException {
+		File saveFolder = new File("save");
+
+		if (!saveFolder.exists()) {
+			saveFolder.mkdir();
+		}
+		
 		String folderPath = "save/" + fileName;
 		
 		File folder = new File(folderPath);
