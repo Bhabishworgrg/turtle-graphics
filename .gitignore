@@ -1,4 +1,9 @@
-.vscode
-sources.txt
-bin/
+# Maven files
+.classpath
+.project
+.settings/
+dependency-reduced-pom.xml
+
+# library and output files
 lib/
+target/
