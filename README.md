@@ -3,64 +3,57 @@ This project is a simple graphics tool implemented in Java using the Swing class
 
 
 ## Table of Contents
-- [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
-- [Running the Projects](#running-the-projects)
-- [Features](#features)
+- [Build](#build)
+- [Running](#running-the-projects)
+- [Usage](#features)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 - [Get in Touch](#get-in-touch)
 
 
-## Getting Started
-To get started with the project, clone the repository to your local machine using the following command:
-```bash
-git clone https://github.com/Bhabishworgrg/turtle-graphics.git
-```
-
 ## Prerequisites
-To run these projects, you need to have the following installed on your machine:
-- [Java Development Kit (JDK)](https://www.oracle.com/in/java/technologies/downloads/)
+To run the application, you need to have the following installed:
+- [JDK](https://www.oracle.com/in/java/technologies/downloads/)
+- [Maven](https://maven.apache.org/download.cgi)
 - [LBUGraphics.jar v4.5](https://github.com/LBU-OOP/OOPturtleGraphicsLibrary/blob/db72a5f59815045516ea444bd8680b1b4cc26e33/LBUGraphics.jar)
 
 
-## Running the Projects
-- Add the `LBUGraphics.jar` to your project:
-  - For VS Code,
-    - Create a `lib` folder
-    - Paste the jar file in the folder
-    - Update your `java.project.referencedLibraries` in `settings.json`:
-    ```json
-    "java.project.referencedLibraries": [
-      "lib/LBUGraphics.jar"
-    ]
-    ```
-  - For other IDEs, follow the respective instructions to add external JAR files.
-
-- Compile and run the project:
-  - Navigate to the project folder
-  ```powershell
-  cd turtle-graphics
-  ```
-  - For compiling, make `bin` folder and `sources.txt` file
-  ```powershell
-  mkdir bin
-  Get-ChildItem -Path .\src -Recurse -Filter *.java | ForEach-Object { $_.FullName } > sources.txt
-  ```
-  - Compile and run the project
-  ```powershell
-  javac -d bin -cp "lib/*" @(Get-Content sources.txt)
-  java -cp "bin;lib/*" mainpackage.MainClass
-  ```
+## Build
+- Clone the repository:
+```bash
+git clone https://github.com/Bhabishworgrg/turtle-graphics.git
+```
+- Add LBUGraphics:
+```bash
+cd turtle-graphics
+mkdir lib
+mv path/to/LBUGraphics.jar lib/
+```
+- Install it locally:
+```bash
+mvn install:install-file \
+    -Dfile=lib/LBUGraphics.jar \
+    -DgroupId=uk.ac.leedsbeckett.oop \
+    -DartifactId=LBUGraphics \
+    -Dversion=4.5 \
+    -Dpackaging=jar
+```
+- Compile the code:
+```bash
+mvn package
+```
 
 
-## Features
-### Basic Application
-- **Initial Setup**: Uses `LBUGraphics` (provided as a JAR file) for drawing and displaying graphics.
-- **Main Class**: `MainClass.java` executes the program.
-- **Graphics System**: `GraphicsSystem.java` extends `LBUGraphics` to draw using commands.
+## Running
+To run the application, execute the command:
+```bash
+java -jar target/turtle-graphics-1.0.1.jar
+```
 
-### Command Support
+
+## Usage
+The following commands are available to manipulate the turtle:
 - **Pen Commands**:
   - `penup`: Lifts the pen from the canvas, so that movement does not get shown.
   - `pendown`: Places the pen down on the canvas so movement gets shown as a drawn line.
@@ -96,30 +89,7 @@ To run these projects, you need to have the following installed on your machine:
   - `circle <radius>`:	Draws a circle of specified radius.
   - `rectangle <length>,<width>`:	Draws a rectangle of specified length and width.
 
-### Command Validation
-- Disallows invalid commands
-- Detects missing parameters in parametric commands.
-- Detects non-integer data for parameters.
-- Correctly bounds parameters and reports errors.
-
-### GUI Warning Dialogues
-- If the current image or commands are not saved.
-- Before closing the application.
-- When invalid commands or nonsensical parameters are entered.
-- Before changing the background colour.
-- If turtle goes out of frame.
-
-### Menu options
-- `File`
-  - `New`: Run the application in a new window
-  - `Exit This File`: Close the current application window
-  - `Exit All`: Closes all windows
-- `Project`
-  - `Set Background`: Opens a colour palette to change the background colour.
-  - `Show Interface`: Hides command box and other compnents in the application when disabled.
-- `Help`
-  - `Commands`: Opens a documentation on commands.
-  - `More Commands`: Opens a documentation on extra commands.
+Check `Help` menu (Only works for Windows as of now) for more detailed information. 
 
 
 ## License
@@ -128,6 +98,7 @@ This repository is licensed under the MIT License. See the [LICENSE](LICENSE) fi
 
 ## Acknowledgements
 Professor Duncan Mullier: Module Leader for the Object-Oriented Programming course.
+
 LBUGraphics: Provided JAR file for graphics functionalities.
 
 
